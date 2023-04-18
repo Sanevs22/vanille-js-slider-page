@@ -1,3 +1,4 @@
+// импортируем картинки
 import { mainSrc, galerySrc, fonsSrc, templSrc } from "./src/data.js";
 
 // Логика слайдера
@@ -8,8 +9,8 @@ let left = document.getElementById('left');
 let rigth = document.getElementById('rigth');
 let page = document.getElementById('page-num');
 
-
 let renderView = () => {
+    view.innerHTML = ''
     for(let i =0; i< mainSrc.length; i++) {
         let div = document.createElement('div');
         div.className = "content-item";
@@ -90,3 +91,7 @@ fons.addEventListener('click', () => {
 
 
 // логика замены
+gridImage.addEventListener('click', ()=> {
+    mainSrc[pageNum-1] = event.target.src;
+    renderView();
+} )
