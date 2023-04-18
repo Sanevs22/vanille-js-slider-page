@@ -199,7 +199,7 @@ p {
     padding-right: 6px;
     position: relative;
     top: 2px;
-    content: url(../src/media/interface/free-icon-font-cross-3917759.png);
+    content: url(./src/media/interface/free-icon-font-cross-3917759.png);
 }
 
 #chech::before {
