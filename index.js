@@ -46,10 +46,12 @@ rigth.addEventListener('click', ()=>{
 })
 
 // Логика переключателя Галерея/Шаблоны/Фон
+let selector = document.getElementById('sel');
 let galery = document.getElementById('galery');
 let templ = document.getElementById('templ');
 let fons = document.getElementById('fons');
 let gridImage = document.getElementById('grid-galery');
+
 
 let renderGrid = (data) => {
     gridImage.innerHTML= '';
@@ -71,27 +73,34 @@ clearModeSelector()
 galery.classList.add('mode-active')
 renderGrid(galerySrc);
 
-galery.addEventListener('click', () => {
+selector.addEventListener('click', () => {
     clearModeSelector()
-    galery.classList.add('mode-active')
-    renderGrid(galerySrc);
-})
-
-templ.addEventListener('click', () => {
-    clearModeSelector()
-    templ.classList.add('mode-active')
-    renderGrid(templSrc)
-})
-
-fons.addEventListener('click', () => {
-    clearModeSelector()
+    if(event.target.id === 'galery') {
+        galery.classList.add('mode-active')
+        renderGrid(galerySrc);
+    } else if (event.target.id === 'templ') {
+        templ.classList.add('mode-active')
+        renderGrid(templSrc)
+    } else if (event.target.id === 'fons') {
     fons.classList.add('mode-active')
     renderGrid(fonsSrc)
+    } 
 })
-
 
 // логика замены
 gridImage.addEventListener('click', ()=> {
     mainSrc[pageNum-1] = event.target.src;
     renderView();
 } )
+
+// окно при нажатии на корзину
+let backet = document.getElementById('basket');
+let modalWind = document.getElementById('modal')
+modalWind.style.display = 'block'
+backet.addEventListener('click', ()=> {
+    modalWind.style.display = 'block'
+    modalWind.style.opacity = 0.9;
+    setTimeout(()=>{
+        modalWind.style.opacity = 0;
+    }, 8000)
+})

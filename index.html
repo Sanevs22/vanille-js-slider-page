@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="modal">
+        Продукт успешно добавлен в корзину
+        <button class="tool-button">перейти в корзину</button>
+
+    </div>
     <div class="main" >
         <div class="header-block">
             <div class="panel">
@@ -15,7 +20,7 @@
                     <p class="head-text">Мой проект</p>
                     <p class="text">Размер 400х280 мм  (В развороте)</p>
                 </div>
-                <button class="basket-button">В корзину</button>
+                <button class="basket-button" id="basket">В корзину</button>
                     <img class="menu-button" src="./src/media/interface/free-icon-font-menu-dots-vertical-3917094.png" alt="">
             </div>
             <div class="dop-panel">
@@ -34,10 +39,10 @@
             </div>
         </div>
         <div class="footer-block">
-            <div class="selector" >
+            <div class="selector" id="sel" >
                 <button class="mode" id="galery">Галерея</button>
-                <button class="mode" id="templ">Шаблоны</button>
-                <button class="mode" id="fons">Фон</button>
+                <button class="mode" id="templ" >Шаблоны</button>
+                <button class="mode" id="fons" >Фон</button>
             </div>
             <div class="selector-tool">
                 <button class="tool-button " id="clear">Очистить</button>
