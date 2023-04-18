@@ -107,7 +107,8 @@ p {
 #view-content{
     display: flex;
     position: relative;
-    right: 100px;
+    transition-property: all;
+    transition: 500ms;
 }
 
 .view-panel{
