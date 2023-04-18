@@ -89,8 +89,10 @@ selector.addEventListener('click', () => {
 
 // логика замены
 gridImage.addEventListener('click', ()=> {
-    mainSrc[pageNum-1] = event.target.src;
-    renderView();
+    if (event.target.src) {
+        mainSrc[pageNum-1] = event.target.src;
+        renderView();
+    }
 } )
 
 // окно при нажатии на корзину
