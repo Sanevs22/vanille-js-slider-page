@@ -199,14 +199,14 @@ p {
     padding-right: 6px;
     position: relative;
     top: 2px;
-    content: url(/src/media/interface/free-icon-font-cross-3917759.png);
+    content: url(../src/media/interface/free-icon-font-cross-3917759.png);
 }
 
 #chech::before {
     padding-right: 6px;
     position: relative;
     top: 2px;
-    content: url(/src/media/interface/free-icon-font-trash-3917439.png);
+    content: url(./src/media/interface/free-icon-font-trash-3917439.png);
 }
 
 #full {
@@ -228,7 +228,7 @@ p {
     padding-right: 6px;
     position: relative;
     top: 2px;
-    content: url(/src/media/interface/free-icon-font-expand-3917480.png);
+    content: url(./src/media/interface/free-icon-font-expand-3917480.png);
 }
 
 #grid-galery {
