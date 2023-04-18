@@ -130,10 +130,18 @@ p {
     transition: 300ms;
 }
 
+
+.content-item img{
+    display: block;
+    height: 300px;
+    width: 400px;
+}
+
 .view-panel{
     display: grid;
     grid-template-columns: 1fr 180px 1fr;
 }
+
 
 .view-panel-button {
     height: 24px;
